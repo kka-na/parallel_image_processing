@@ -1,0 +1,6 @@
+#Ignore File
+
+#build folder
+build/
+#lecture note
+Lecture2_introduction to image processing libraries(OpenCV).pdf
