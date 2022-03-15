@@ -2,7 +2,7 @@
 
 ## Usage
 
-'''
+```
 $ cmake .. && make && ./hw1
 -- Configuring done
 -- Generating done
@@ -41,4 +41,4 @@ Threshold Gray : 117
 ፨ Quit to Enter 0 ፨
 ▶▷▶ 0
 End Homewrok 1 ...
-'''
+```
