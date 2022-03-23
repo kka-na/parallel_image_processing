@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.16)
+project( hw2 )
+find_package( OpenCV REQUIRED )
+find_package(IPP REQUIRED)
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+set(IPP_LIBRARIES IPP::ippcore IPP::ippcc IPP::ipp_iw IPP::ippcv IPP::ippe IPP::ippi IPP::ipps IPP::ippvm )
+add_executable( hw2 ./src/hw2.cpp )
+target_link_libraries( hw2  PUBLIC ${IPP_LIBRARIES} ${OpenCV_LIBS})

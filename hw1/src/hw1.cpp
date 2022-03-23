@@ -23,10 +23,10 @@ int main()
             SaltandPepper sp;
             Mat src = imread("../image/hw1_1.ppm", IMREAD_GRAYSCALE);
             Mat dst;
-            sp.myMedian(src, dst, Size(5, 5));
+            sp.myMedian(src, dst, Size(9, 9));
             hconcat(src, dst, dst);
             imshow("Salt and Pepper", dst);
-            imwrite("../result/salt_and_pepper_result.jpg", dst);
+            imwrite("../result/salt_and_pepper_9x9result.jpg", dst);
         }
         else if (question_num == 2)
         { // Histogram
