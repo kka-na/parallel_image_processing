@@ -68,18 +68,18 @@ int main()
             cout << "Using IPP" << endl;
             Mat src = image.clone();
             cout << "[ Checking Gaussian ]" << endl;
-            TestMultipleImages(src, 0, 0, false);
+            TestMultipleImages(src, 0, 0, true);
             cout << "[ Checking Medain ]" << endl;
-            TestMultipleImages(src, 0, 1, false);
+            TestMultipleImages(src, 0, 1, true);
         }
         else if (question_num == 4)
         {
             cout << "Using OpenCV" << endl;
             Mat src = image.clone();
             cout << "[ Checking Gaussian ]" << endl;
-            TestMultipleImages(src, 1, 0, false);
+            TestMultipleImages(src, 1, 0, true);
             cout << "[ Checking Medain ]" << endl;
-            TestMultipleImages(src, 1, 1, false);
+            TestMultipleImages(src, 1, 1, true);
         }
         else if (question_num == 0)
         {
@@ -127,7 +127,7 @@ void TestMultipleImages(Mat src, int ptype, int ftype, bool _show)
             else if (ptype == 1)
             {
                 start = clock();
-                dst = mc.CvGaussian(src, ksize, sigma);
+                dst = mc.CvGaussian(ssrc, ksize, sigma);
                 finish = clock();
             }
         }
@@ -142,7 +142,7 @@ void TestMultipleImages(Mat src, int ptype, int ftype, bool _show)
             else if (ptype == 1)
             {
                 start = clock();
-                dst = mc.CvMedian(src, ksize);
+                dst = mc.CvMedian(ssrc, ksize);
                 finish = clock();
             }
         }
@@ -158,7 +158,8 @@ void TestMultipleImages(Mat src, int ptype, int ftype, bool _show)
         for (int i = 0; i < 4; i++)
         {
             string size = "[" + to_string(sizes[i].width) + " x " + to_string(sizes[i].width) + "]";
-            imshow(ptypes + " 5x5 " + ftypes + " Filter on Image [" + size + "]", dsts[i]);
+            // imshow(ptypes + " 5x5 " + ftypes + " Filter on Image [" + size + "]", dsts[i]);
+            imwrite("../result/" + ptypes + "5x5" + ftypes + size + ".jpg", dsts[i]);
         }
     }
 }

@@ -2,6 +2,7 @@
 
 ## Usage
 
+```
 kana@Alienware:~/Documents/Class/Parallel image processing programming/hw2/build$ cmake .. && make && ./hw2
 -- Configuring done
 -- Generating done
@@ -34,30 +35,31 @@ IPP Processing time : 0.000195 sec
 ▶▷▶ 3
 Using IPP
 [ Checking Gaussian ]
-IPPProcessing time of Image [256 x 256] : 0.000279 sec
-IPPProcessing time of Image [512 x 512] : 0.001223 sec
-IPPProcessing time of Image [1024 x 1024] : 0.005796 sec
-IPPProcessing time of Image [2048 x 2048] : 0.008692 sec
+IPPProcessing time of Image [256 x 256] : 8.5e-05 sec
+IPPProcessing time of Image [512 x 512] : 0.000255 sec
+IPPProcessing time of Image [1024 x 1024] : 0.000974 sec
+IPPProcessing time of Image [2048 x 2048] : 0.004185 sec
 [ Checking Medain ]
-IPPProcessing time of Image [256 x 256] : 0.000176 sec
-IPPProcessing time of Image [512 x 512] : 0.000317 sec
-IPPProcessing time of Image [1024 x 1024] : 0.000967 sec
-IPPProcessing time of Image [2048 x 2048] : 0.003969 sec
+IPPProcessing time of Image [256 x 256] : 9.1e-05 sec
+IPPProcessing time of Image [512 x 512] : 0.000173 sec
+IPPProcessing time of Image [1024 x 1024] : 0.000617 sec
+IPPProcessing time of Image [2048 x 2048] : 0.003756 sec
 
 ፨ Quit to Enter 0 ፨
 ▶▷▶ 4
 Using OpenCV
 [ Checking Gaussian ]
-OpenCVProcessing time of Image [256 x 256] : 0.066031 sec
-OpenCVProcessing time of Image [512 x 512] : 0.037918 sec
-OpenCVProcessing time of Image [1024 x 1024] : 0.027451 sec
-OpenCVProcessing time of Image [2048 x 2048] : 0.020481 sec
+OpenCVProcessing time of Image [256 x 256] : 0.000413 sec
+OpenCVProcessing time of Image [512 x 512] : 0.00011 sec
+OpenCVProcessing time of Image [1024 x 1024] : 0.000967 sec
+OpenCVProcessing time of Image [2048 x 2048] : 0.005737 sec
 [ Checking Medain ]
-OpenCVProcessing time of Image [256 x 256] : 0.020735 sec
-OpenCVProcessing time of Image [512 x 512] : 0.021126 sec
-OpenCVProcessing time of Image [1024 x 1024] : 0.0208 sec
-OpenCVProcessing time of Image [2048 x 2048] : 0.020411 sec
+OpenCVProcessing time of Image [256 x 256] : 0.000419 sec
+OpenCVProcessing time of Image [512 x 512] : 0.000853 sec
+OpenCVProcessing time of Image [1024 x 1024] : 0.002209 sec
+OpenCVProcessing time of Image [2048 x 2048] : 0.005906 sec
 
 ፨ Quit to Enter 0 ፨
 ▶▷▶ 0
 End Homewrok 2 ...
+```
