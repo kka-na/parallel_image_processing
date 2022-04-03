@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/ex3.dir/ex3.cpp.o -o ex3  /usr/lib/gcc/x86_64-linux-gnu/9/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.so 
