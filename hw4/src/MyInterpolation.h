@@ -3,72 +3,59 @@
 
 #include <omp.h>
 #include <iostream>
-#include "opencv2/opencv.hpp"
-
+#include "opencv2/core/core.hpp"
+#include "opencv2/highgui/highgui.hpp"
+#include "opencv2/imgproc/imgproc.hpp"
 using namespace cv;
 using namespace std;
 
 class MyInterpolation
 {
 public:
-    Mat Serial_Interpolation(Mat imgL, Mat imgR, Mat matHomo)
+    Mat src;
+    int h, w;
+
+    MyInterpolation(Mat _src){
+        src = _src;
+        h = src.rows;
+        w = src.cols;
+    }
+    Mat Serial_Interpolation(int type, int npixel)
     {
-        /*         |_________H________|   |_X'_|
-                   | h'11  h'12  h'13 |   | X' |
-        inv(H)X' = | h'21  h'22  h'23 | * | Y' | => "Backward Warping ! "
-                   | h'31  h'32   1   |   | 1  |
-        */
-        // Same with Forwarding
-        Mat ptsR = allPoint2Mat(imgR);
-        Mat ptsAfterHOMO = matHomo * ptsR;
-        divide(ptsAfterHOMO.row(0), ptsAfterHOMO.row(2), ptsAfterHOMO.row(0));
-        divide(ptsAfterHOMO.row(1), ptsAfterHOMO.row(2), ptsAfterHOMO.row(1));
-
-        pair<int, int> xMinMax = getMinMax(ptsAfterHOMO, 0);
-        pair<int, int> yMinMax = getMinMax(ptsAfterHOMO, 1);
-
-        int w, h;
-        if (xMinMax.second > imgL.cols)
-            w = xMinMax.second; // + xMinMax.first;
-        else
-            w = imgL.cols; //+ xMinMax.first;
-        if (yMinMax.second > imgL.rows)
-            h = yMinMax.second; // + yMinMax.first;
-        else
-            h = imgL.rows; // + xMinMax.first;
-
-        int wWp = xMinMax.second - xMinMax.first;
-        int hWp = yMinMax.second - yMinMax.first;
-
-        Mat ptsWP = allPoint2MatbyIdx(xMinMax, yMinMax);
-        Mat invHOMO = matHomo.inv();
-        Mat ptsAfterInvHOMO = invHOMO * ptsWP;
-        divide(ptsAfterInvHOMO.row(0), ptsAfterInvHOMO.row(2), ptsAfterInvHOMO.row(0));
-        divide(ptsAfterInvHOMO.row(1), ptsAfterInvHOMO.row(2), ptsAfterInvHOMO.row(1));
-
-        Mat result = Mat::zeros(h, w, imgL.type());
-
+        int hWp = h*npixel;
+        int wWp = w*npixel;
+        Mat result = Mat::zeros(hWp, wWp, src.type());    
+        
         for (int r = 0; r < hWp; r++)
         {
             for (int c = 0; c < wWp; c++)
             {
                 // using Bilinear Interpolation , can get
-                double x = double(ptsAfterInvHOMO.at<double>(0, r * wWp + c));
-                double y = double(ptsAfterInvHOMO.at<double>(1, r * wWp + c));
-                if ((x < imgL.cols - 1) && (y < imgL.rows - 1) && (x > 1) && (y > 1))
+                double x = double(double(c)/double(npixel)-(int)(c/npixel));
+                double y =double(double(r)/double(npixel)-(int)(r/npixel));
+                if ((x < src.cols - 1) && (y < src.rows - 1) && (x > 1) && (y > 1))
                 {
-                    vector<double> biRGB = Bilinear(imgR, x, y);
+                    vector<double> itpRGB;
+                    switch(type)
+                    {
+                    case 1:
+                        itpRGB = Bilinear(x,y);
+                        break;
+                    
+                    default:
+                        itpRGB = Bilinear(x,y);
+                        break;
+                    }
                     for (int i = 0; i < 3; i++)
                     {
-                        // result.at<Vec3b>(r+2*(yMinMax.first),c+2*(xMinMax.first))[i] = biRGB[i];
-                        result.at<Vec3b>(r + yMinMax.first, c + xMinMax.first)[i] = biRGB[i];
+                        result.at<Vec3b>(r, c)[i] = itpRGB[i];
                     }
                 }
             }
         }
         return result;
     }
-    vector<double> Bilinear(Mat imgR, double x, double y)
+    vector<double> Bilinear(double x, double y)
     {
         /* Bilinear Interpolation ( find xy with four points )
         (x1,y2)   (x2,y2)
@@ -87,10 +74,10 @@ public:
         vector<double> p11, p21, p12, p22;
         for (int i = 0; i < 3; i++)
         {
-            p11.push_back(imgR.at<Vec3b>(y1, x1)[i]);
-            p21.push_back(imgR.at<Vec3b>(y1, x2)[i]);
-            p12.push_back(imgR.at<Vec3b>(y2, x1)[i]);
-            p22.push_back(imgR.at<Vec3b>(y2, x2)[i]);
+            p11.push_back(src.at<Vec3b>(y1, x1)[i]);
+            p21.push_back(src.at<Vec3b>(y1, x2)[i]);
+            p12.push_back(src.at<Vec3b>(y2, x1)[i]);
+            p22.push_back(src.at<Vec3b>(y2, x2)[i]);
         }
         vector<double> p;
         /*

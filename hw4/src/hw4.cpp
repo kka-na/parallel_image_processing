@@ -1,4 +1,4 @@
-#include "MyFilter.h"
+#include "MyInterpolation.h"
 #include <chrono>
 
 int decidePixel();
@@ -30,6 +30,8 @@ int main()
     auto duration1 = std::chrono::duration_cast<std::chrono::microseconds>(finish1 - start1);
     cout << "Processing Time : " << float(duration1.count()) / 1000000 << " sec" << endl;
 
+    MyInterpolation mi(image);
+
     while (true)
     {
         cout << "\n፨ Quit to Enter 0 ፨" << endl;
@@ -39,6 +41,7 @@ int main()
         int npixel = decidePixel();
         if (question_num == 1)
         {
+            mi.Serial_Interpolation(question_num,npixel);
         }
         else if (question_num == 2)
         {
@@ -67,6 +70,7 @@ int main()
 
 void showType(int num)
 {
+    if( num > 0 && num <= 4)
     cout << "<" << interpolation_type[num] << ">" << endl;
 }
 
