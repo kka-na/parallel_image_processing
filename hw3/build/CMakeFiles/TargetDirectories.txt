@@ -1,3 +1,0 @@
-/home/kana/Documents/Class/Parallel image processing programming/hw3/build/CMakeFiles/rebuild_cache.dir
-/home/kana/Documents/Class/Parallel image processing programming/hw3/build/CMakeFiles/hw3.dir
-/home/kana/Documents/Class/Parallel image processing programming/hw3/build/CMakeFiles/edit_cache.dir
