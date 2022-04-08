@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/kana/Documents/Class/Parallel image processing programming/hw4/src/hw4.cpp" "CMakeFiles/hw4.dir/src/hw4.cpp.o" "gcc" "CMakeFiles/hw4.dir/src/hw4.cpp.o.d"
+  "/home/kana/Documents/Class/Parallel image processing programming/hw3/src/hw3.cpp" "CMakeFiles/hw3.dir/src/hw3.cpp.o" "gcc" "CMakeFiles/hw3.dir/src/hw3.cpp.o.d"
   )
 
 # Targets to which this target links.
