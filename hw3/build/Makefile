@@ -57,10 +57,10 @@ RM = /home/kana/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/kana/Documents/Class/Parallel image processing programming/hw4"
+CMAKE_SOURCE_DIR = "/home/kana/Documents/Class/Parallel image processing programming/hw3"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/kana/Documents/Class/Parallel image processing programming/hw4/build"
+CMAKE_BINARY_DIR = "/home/kana/Documents/Class/Parallel image processing programming/hw3/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/kana/Documents/Class/Parallel image processing programming/hw4/build/CMakeFiles" "/home/kana/Documents/Class/Parallel image processing programming/hw4/build//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/kana/Documents/Class/Parallel image processing programming/hw3/build/CMakeFiles" "/home/kana/Documents/Class/Parallel image processing programming/hw3/build//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/kana/Documents/Class/Parallel image processing programming/hw4/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/kana/Documents/Class/Parallel image processing programming/hw3/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -117,41 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named hw4
+# Target rules for targets named hw3
 
 # Build rule for target.
-hw4: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hw4
-.PHONY : hw4
+hw3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hw3
+.PHONY : hw3
 
 # fast build rule for target.
-hw4/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/build
-.PHONY : hw4/fast
+hw3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw3.dir/build.make CMakeFiles/hw3.dir/build
+.PHONY : hw3/fast
 
-src/hw4.o: src/hw4.cpp.o
-.PHONY : src/hw4.o
+src/hw3.o: src/hw3.cpp.o
+.PHONY : src/hw3.o
 
 # target to build an object file
-src/hw4.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/src/hw4.cpp.o
-.PHONY : src/hw4.cpp.o
+src/hw3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw3.dir/build.make CMakeFiles/hw3.dir/src/hw3.cpp.o
+.PHONY : src/hw3.cpp.o
 
-src/hw4.i: src/hw4.cpp.i
-.PHONY : src/hw4.i
+src/hw3.i: src/hw3.cpp.i
+.PHONY : src/hw3.i
 
 # target to preprocess a source file
-src/hw4.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/src/hw4.cpp.i
-.PHONY : src/hw4.cpp.i
+src/hw3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw3.dir/build.make CMakeFiles/hw3.dir/src/hw3.cpp.i
+.PHONY : src/hw3.cpp.i
 
-src/hw4.s: src/hw4.cpp.s
-.PHONY : src/hw4.s
+src/hw3.s: src/hw3.cpp.s
+.PHONY : src/hw3.s
 
 # target to generate assembly for a file
-src/hw4.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw4.dir/build.make CMakeFiles/hw4.dir/src/hw4.cpp.s
-.PHONY : src/hw4.cpp.s
+src/hw3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw3.dir/build.make CMakeFiles/hw3.dir/src/hw3.cpp.s
+.PHONY : src/hw3.cpp.s
 
 # Help Target
 help:
@@ -161,10 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... hw4"
-	@echo "... src/hw4.o"
-	@echo "... src/hw4.i"
-	@echo "... src/hw4.s"
+	@echo "... hw3"
+	@echo "... src/hw3.o"
+	@echo "... src/hw3.i"
+	@echo "... src/hw3.s"
 .PHONY : help
 
 

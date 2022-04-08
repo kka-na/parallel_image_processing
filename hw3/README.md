@@ -1,19 +1,36 @@
-# INHA Univ. Computer Vision for Graduated Students EX4
+# INHA Univ. Computer Vision for Graduated Students HW3
 
-# ./ex4
+# ./hw3
 
 ```
-kana@Alienware:~/Documents/Class/Parallel image processing programming/ex4/build$ cmake .. && make && ./ex4
--- Configuring done
--- Generating done
--- Build files have been written to: /home/kana/Documents/Class/Parallel image processing programming/ex4/build
-Consolidate compiler generated dependencies of target ex4
-[ 50%] Building CXX object CMakeFiles/ex4.dir/ex4.cpp.o
-[100%] Linking CXX executable ex4
-[100%] Built target ex4
+kana@Alienware:~/Documents/Class/Parallel image processing programming/hw3/build$ cmake .. && make && ./hw3
+-- Build files have been written to: /home/kana/Documents/Class/Parallel image processing programming/hw3/build
+[ 50%] Building CXX object CMakeFiles/hw3.dir/src/hw3.cpp.o
+[100%] Linking CXX executable hw3
+[100%] Built target hw3
 
-Parallel Image Processing Programming Excersise
+Parallel Image Processing Programming HW4
 22212231 김가나
-Serial Gaussian Processint Time : 35.5722 sec
-OpenMP Gaussian Processint Time : 4.79144 sec
+
+
+፨ Enter Question number to To check the answer to the problem. ፨
+[ Question #1 ]
+Bilinear
+[ Question #2 ]
+BiCubic
+[ Question #3 ]
+Lagrange
+[ Question #4 ]
+BSpline
+
+፨ Quit to Enter 0 ፨
+▶▷▶ 1
+፨ Enter number of pixels for interpolation ፨
+▶▷▶ 9
+
+[ Bilinear ]
+  |- Processing Time
+     - Serial : 0.775142 sec
+     - OMP    : 0.124071 sec
+
 ```

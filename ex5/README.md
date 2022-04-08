@@ -1,19 +1,21 @@
-# INHA Univ. Computer Vision for Graduated Students EX4
+# INHA Univ. Computer Vision for Graduated Students EX5
 
-# ./ex4
+# ./ex5
 
 ```
-kana@Alienware:~/Documents/Class/Parallel image processing programming/ex4/build$ cmake .. && make && ./ex4
+kana@Alienware:~/Documents/Class/Parallel image processing programming/ex5/build$ cmake .. && make && ./ex5
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/kana/Documents/Class/Parallel image processing programming/ex4/build
-Consolidate compiler generated dependencies of target ex4
-[ 50%] Building CXX object CMakeFiles/ex4.dir/ex4.cpp.o
-[100%] Linking CXX executable ex4
-[100%] Built target ex4
+-- Build files have been written to: /home/kana/Documents/Class/Parallel image processing programming/ex5/build
+Consolidate compiler generated dependencies of target ex5
+[ 50%] Building CXX object CMakeFiles/ex5.dir/ex5.cpp.o
+[100%] Linking CXX executable ex5
+[100%] Built target ex5
 
 Parallel Image Processing Programming Excersise
 22212231 김가나
-Serial Gaussian Processint Time : 35.5722 sec
-OpenMP Gaussian Processint Time : 4.79144 sec
 ```
+
+<p align="center">
+  <img src="./result.png"/>
+</p>

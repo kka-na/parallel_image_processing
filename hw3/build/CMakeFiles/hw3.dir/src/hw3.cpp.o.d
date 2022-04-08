@@ -1,7 +1,7 @@
-CMakeFiles/hw4.dir/src/hw4.cpp.o: \
- /home/kana/Documents/Class/Parallel\ image\ processing\ programming/hw4/src/hw4.cpp \
+CMakeFiles/hw3.dir/src/hw3.cpp.o: \
+ /home/kana/Documents/Class/Parallel\ image\ processing\ programming/hw3/src/hw3.cpp \
  /usr/include/stdc-predef.h \
- /home/kana/Documents/Class/Parallel\ image\ processing\ programming/hw4/src/MyInterpolation.h \
+ /home/kana/Documents/Class/Parallel\ image\ processing\ programming/hw3/src/MyInterpolation.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/omp.h \
  /usr/include/c++/9/iostream \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
