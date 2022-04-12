@@ -1,4 +1,4 @@
-# INHA Univ. Computer Vision for Graduated Students EX4
+# INHA Univ. Parallel Image Processing Programming for Graduated Students EX4
 
 # ./ex4
 

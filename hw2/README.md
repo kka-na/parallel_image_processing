@@ -63,3 +63,10 @@ OpenCVProcessing time of Image [2048 x 2048] : 0.005906 sec
 ▶▷▶ 0
 End Homewrok 2 ...
 ```
+
+<p align="center">
+  <img src="./result/IPP5x5Gaussian[512 x 512].jpg"/>
+</p>
+<p align="center">
+  <img src="./result/IPP5x5Median[512 x 512].jpg"/>
+</p>

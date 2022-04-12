@@ -1,4 +1,4 @@
-# INHA Univ. Computer Vision for Graduated Students HW3
+# INHA Univ. Parallel Image Processing Programming for Graduated Students HW3
 
 # ./hw3
 
@@ -34,3 +34,7 @@ BSpline
      - OMP    : 0.124071 sec
 
 ```
+
+<p align="center">
+  <img src="./result/Bilinear_dst.png"/>
+</p>

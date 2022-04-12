@@ -1,3 +1,3 @@
-# INHA Univ. Computer Vision for Graduated Students HW 1 
+# INHA Univ. Parallel Image Processing Programming for Graduated Students EX 3
 
-# ./hw1 
+# ./ex3
