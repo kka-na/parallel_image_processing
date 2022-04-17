@@ -1,9 +1,9 @@
-# INHA Univ. Parallel Image Processing Programming for Graduated Students HW4
+# INHA Univ. Parallel Image Processing Programming for Graduated Students HW5
 
-# ./hw4
+# ./hw5
 
 ```
-kana@Alienware:~/Documents/Class/Parallel image processing programming/hw4/build$ cmake .. && make && ./hw4
+kana@Alienware:~/Documents/Class/Parallel image processing programming/hw5/build$ cmake .. && make && ./hw5
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/kana/Documents/Class/Parallel image processing programming/hw4/build

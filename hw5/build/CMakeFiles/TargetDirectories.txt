@@ -1,0 +1,3 @@
+/Users/kanakim/Documents/Coding/parallel_image_processing/hw5/build/CMakeFiles/hw5.dir
+/Users/kanakim/Documents/Coding/parallel_image_processing/hw5/build/CMakeFiles/edit_cache.dir
+/Users/kanakim/Documents/Coding/parallel_image_processing/hw5/build/CMakeFiles/rebuild_cache.dir
