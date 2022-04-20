@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/kanakim/Documents/Coding/parallel_image_processing/hw5/src/hw5.cpp" "CMakeFiles/hw5.dir/src/hw5.cpp.o" "gcc" "CMakeFiles/hw5.dir/src/hw5.cpp.o.d"
+  "/home/kana/Documents/Class/Parallel image processing programming/hw5/src/hw5.cpp" "CMakeFiles/hw5.dir/src/hw5.cpp.o" "gcc" "CMakeFiles/hw5.dir/src/hw5.cpp.o.d"
   )
 
 # Targets to which this target links.

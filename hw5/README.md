@@ -6,27 +6,21 @@
 kana@Alienware:~/Documents/Class/Parallel image processing programming/hw5/build$ cmake .. && make && ./hw5
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/kana/Documents/Class/Parallel image processing programming/hw4/build
-Consolidate compiler generated dependencies of target hw4
-[ 50%] Building CXX object CMakeFiles/hw4.dir/src/hw4.cpp.o
-[100%] Linking CXX executable hw4
-[100%] Built target hw4
+-- Build files have been written to: /home/kana/Documents/Class/Parallel image processing programming/hw5/build
+Consolidate compiler generated dependencies of target hw5
+[100%] Built target hw5
 
-Parallel Image Processing Programming HW4
+Parallel Image Processing Programming HW5
 22212231 김가나
 
-Multiple Video Processing
- |-Capture
- |-Display
- |-Face Detection
- |-Human Detection
-Capture Thread #15
-Display Thread #1
-Human Detection Thread #3
-Face Detection Thread #6
+Mean Filtering Using SSE & Compare with Serial
+  |- Processing Time
+     - Serial    : 0.000719 sec
+     - SSE       : 0.00038 sec
 
 ```
 
 <p align="center">
-  <img src="./result/result.gif"/>
+  <img src="./result/serial_mean.jpg"/>
+  <img src="./result/sse_mean.jpg"/>
 </p>
