@@ -13,11 +13,11 @@ int main()
     cout << "\nMean Filtering Using SSE & Compare with Serial\n";
 
     float serial = doSerialMean();
-    float sse = doSSEMean();
+    // float sse = doSSEMean();
 
     cout << "  |- Processing Time" << endl;
     cout << "     - Serial    : " << serial << " sec" << endl;
-    cout << "     - SSE       : " << sse << " sec" << endl;
+    // cout << "     - SSE       : " << sse << " sec" << endl;
 
     destroyAllWindows();
     return 0;
