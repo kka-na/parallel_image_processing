@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+project( ex5 )
+find_package( OpenCV REQUIRED )
+find_package(OpenMP REQUIRED)
+add_executable( ex5 ex5.cpp )
+target_link_libraries( ex5  OpenMP::OpenMP_CXX ${OpenCV_LIBS})

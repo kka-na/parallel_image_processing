@@ -45,8 +45,8 @@ float doOpenMP()
     auto finish = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(finish - start);
     resize(dst, dst, Size(dst.cols / 3, dst.rows / 3));
-    imshow("Bayer Interpolation ( OpenMP Processing )", dst);
-    // imwrite("../result/omp.png", dst);
+    // imshow("Bayer Interpolation ( OpenMP Processing )", dst);
+    //  imwrite("../result/omp.png", dst);
     waitKey(0);
 
     return float(duration.count()) / 1000000;
