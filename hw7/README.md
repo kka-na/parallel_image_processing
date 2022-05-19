@@ -30,9 +30,14 @@ Kernel Size = 5x5 , Sigma Value = 70.0f
 ```
 
 <p align="center">
+  <p>Serial</p>
   <img src="./result/serial.png"/>
+  <p>OpenMP</p>
   <img src="./result/omp.png"/>
+  <p>OpenCV</p>
   <img src="./result/cv.png"/>
+  <p>IPP</p>
   <img src="./result/ipp.png"/>
+  <p>CUDA</p>
   <img src="./result/cuda.png"/>
 </p>

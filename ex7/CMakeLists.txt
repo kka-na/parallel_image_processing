@@ -6,5 +6,5 @@ find_package( OpenCV REQUIRED )
 
 include_directories(/usr/local/cuda-11.4/samples/common/inc /usr/local/cuda-11.4/include)
 
-add_executable(ex7 ex7.cpp ex7.cu)
+add_executable(ex7 ex7.cpp kernel.cu)
 target_link_libraries( ex7 ${OpenCV_LIBS})
