@@ -61,6 +61,7 @@ int main()
     // imshow("IPP", ipp);
     // imshow("CUDA", cuda);
 
+    imwrite("../result/original.png", src);
     imwrite("../result/serial.png", serial);
     imwrite("../result/omp.png", omp);
     imwrite("../result/cv.png", cv);
