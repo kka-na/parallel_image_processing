@@ -5,7 +5,7 @@
 using namespace cv;
 using namespace std;
 
-Mat ippGaussian(Mat image, int _ksize)
+Mat ippGaussian(Mat image, int _ksize, float _sigma)
 {
     int width = image.cols;
     int height = image.rows;
@@ -15,7 +15,7 @@ Mat ippGaussian(Mat image, int _ksize)
     int dstStep = height * sizeof(Ipp8u);
     Ipp8u borderValue = 255;
     Ipp32u kernelSize = _ksize;
-    Ipp32f sigma = 70.0f;
+    Ipp32f sigma = _sigma;
     IppFilterGaussianSpec *pSpec = NULL;
     int iBufSize = 0, iSpecSize = 0;
     IppiBorderType borderType = ippBorderConst;

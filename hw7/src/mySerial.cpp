@@ -52,11 +52,11 @@ double gaussian2D(float c, float r, double sigma)
     return exp(-(pow(c, 2) + pow(r, 2)) / (2 * pow(sigma, 2))) / (2 * CV_PI * pow(sigma, 2));
 }
 
-Mat serialGaussian(const Mat &srcImg, int _ksize)
+Mat serialGaussian(const Mat &srcImg, int _ksize, float _sigma)
 {
     Mat dstImg;
     Mat kn = Mat::zeros(Size(_ksize, _ksize), CV_32FC1);
-    double sigma = 70.0;
+    double sigma = _sigma;
     float *kn_data = (float *)kn.data;
     for (int c = 0; c < kn.cols; c++)
     {

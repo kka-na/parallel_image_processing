@@ -49,11 +49,11 @@ void ompKernelConv(const Mat &srcImg, Mat &dstImg, const Mat &kn)
     }
 }
 
-Mat ompGaussian(const Mat &srcImg, int _ksize)
+Mat ompGaussian(const Mat &srcImg, int _ksize, float _sigma)
 {
     Mat dstImg;
     Mat kn = Mat::zeros(Size(_ksize, _ksize), CV_32FC1);
-    double sigma = 70.0;
+    double sigma = _sigma;
     float *kn_data = (float *)kn.data;
     for (int c = 0; c < kn.cols; c++)
     {

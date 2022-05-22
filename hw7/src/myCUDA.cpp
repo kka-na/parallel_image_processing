@@ -8,7 +8,7 @@
 using namespace cv;
 using namespace std;
 
-Mat cudaGaussian(Mat src, int _ksize)
+Mat cudaGaussian(Mat src, int _ksize, float _sigma)
 {
     Mat dst(src.size(), CV_8UC1);
     int w = src.cols;
@@ -16,6 +16,7 @@ Mat cudaGaussian(Mat src, int _ksize)
 
     float *pSrc = new float[w * h];
     float *pDst = new float[w * h];
+    // y * width + x
     for (int j = 0; j < h; j++)
     {
         for (int i = 0; i < w; i++)
@@ -24,7 +25,7 @@ Mat cudaGaussian(Mat src, int _ksize)
         }
     }
 
-    doGaussian(pSrc, pDst, w, h, _ksize);
+    doGaussian(pSrc, pDst, w, h, _ksize, _sigma);
 
     for (int j = 0; j < h; j++)
     {
@@ -33,6 +34,5 @@ Mat cudaGaussian(Mat src, int _ksize)
             dst.at<uchar>(j, i) = pDst[j * w + i];
         }
     }
-
     return dst;
 }

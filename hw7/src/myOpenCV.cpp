@@ -4,9 +4,9 @@
 using namespace cv;
 using namespace std;
 
-Mat cvGaussian(Mat src, int _ksize)
+Mat cvGaussian(Mat src, int _ksize, float _sigma)
 {
     Mat dst(src.size(), src.type());
-    cv::GaussianBlur(src, dst, Size(_ksize, _ksize), 70.0f);
+    cv::GaussianBlur(src, dst, Size(_ksize, _ksize), _sigma);
     return dst;
 }
