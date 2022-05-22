@@ -1,7 +1,5 @@
 # INHA Univ. Parallel Image Processing Programming for Graduated Students HW7
 
-## Now Fixing the CUDA Gaussian Filtering Error!!!!!!
-
 ## ./hw7
 
 ```
