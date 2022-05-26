@@ -24,9 +24,9 @@ Constant more Faster than Global about 571 %
 
 <p align="center">
   <p>Global</p>
-  <img src="./result/Global.png"/>
+  <img src="./result/Global.jpg"/>
   <p>Shared</p>
-  <img src="./result/Shared.png"/>
+  <img src="./result/Shared.jpg"/>
   <p>Constant</p>
-  <img src="./result/Constant.png"/>
+  <img src="./result/Constant.jpg"/>
 </p>
