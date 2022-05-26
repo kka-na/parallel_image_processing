@@ -29,6 +29,7 @@ void Seq_Gaborfilter(float Gvar, float Gtheta, float Glambda, float Gpsi, int Gk
 int main()
 {
     Mat pInput = imread("../image/Grab_Image.bmp", 0);
+    resize(pInput, pInput, Size(512, 512));
 
     int w = pInput.cols;
     int ws = pInput.cols;
@@ -54,7 +55,7 @@ int main()
         // copy input image across to the device
         (cudaMemcpy(pcuSrc, pfInput.data, w * h * sizeof(float), cudaMemcpyHostToDevice));
 
-        int kernel_size = 5;
+        int kernel_size = 17;
         float *Gkernel = new float[kernel_size * kernel_size];
         Seq_Gaborfilter(0.5, (180.0 * 3.141593 / 180), (0.55), (90 * 3.141593 / 180), kernel_size, Gkernel);
 
@@ -71,7 +72,6 @@ int main()
         ptime[i] = double(std::chrono::duration_cast<std::chrono::microseconds>(f1 - s1).count()) / 1000000;
         Mat result(Size(pInput.cols, pInput.rows), CV_32FC1, pDst);
         result.convertTo(result, CV_8UC1);
-        resize(result, result, Size(512, 512));
         presult[i] = result;
 
         cudaFree(pcuSrc);
@@ -84,6 +84,9 @@ int main()
         printf("%s more Faster than Global about %d % \n", types[i].c_str(), int((ptime[0] / ptime[i]) * 100));
     for (int i = 0; i < 3; i++)
         imwrite("../result/" + types[i] + ".jpg", presult[i]);
+
+    imshow(types[1], presult[1]);
+    waitKey(0);
 
     // for (int i = 0; i < 3; i++)
     // {
