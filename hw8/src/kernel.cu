@@ -93,5 +93,6 @@ void doGaussian(float *pSrc, float *pDst, int w, int h, int ksize, float _sigma,
     (cudaMemcpy(pcuKernel, pKernel, ksize * ksize * sizeof(float), cudaMemcpyHostToDevice));
 
     gpuGaussian(pcuSrc, pcuDst, w, h, pcuKernel, ksize, type);
+
     (cudaMemcpy(pDst, pcuDst, w * h * sizeof(float), cudaMemcpyDeviceToHost));
 }
