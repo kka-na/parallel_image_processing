@@ -1,6 +1,6 @@
-# INHA Univ. Parallel Image Processing Programming for Graduated Students HW7
+# INHA Univ. Parallel Image Processing Programming for Graduated Students HW8
 
-## ./hw7
+## ./hw8
 
 ```
 kana@Alienware:~/Documents/Class/Parallel image processing programming/hw8/build$ cmake .. && make && ./hw8
@@ -16,7 +16,7 @@ Parallel Image Processing Programming HW8
 22212231 김가나
 Gaussian Filtering Using CUDA with Vaious Set of Memory Type
 Global, Shared, Constant
-
+Z
 Image Size = 4096x4096, Kernel Size = 25x25 , Sigma Value = 25.0f
 
   |- Processing Time
