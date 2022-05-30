@@ -31,9 +31,6 @@ __global__ void cuda_Filter2D(float *pSrcImage, int SrcWidth, int SrcHeight, flo
     //	input[index] = clamp1(input);
     if (x >= KWidth / 2 && y >= KHeight / 2 && x < SrcWidth - KWidth / 2 && y < SrcHeight - KHeight / 2)
     {
-
-        // make cuda code here !!!!!!!!!!!!!!!!!!!!!!!!!
-        // pDstImage[index] = 255;
         temp = 0;
         for (int j = 0; j < KHeight; j++)
         {
@@ -80,7 +77,6 @@ void Gaussian(double* In, double* Out, int kDim, int inWidth, int outWidth, int 
     } else
         loadIn[threadIdx.y * blockDim.x + threadIdx.x] = 0.0;
 }
-
 */
 void gpu_Gabor(float *pcuSrc, float *pcuDst, int w, int h, float *cuGkernel, int kernel_size, int type)
 {

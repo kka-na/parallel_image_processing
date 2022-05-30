@@ -29,7 +29,7 @@ void Seq_Gaborfilter(float Gvar, float Gtheta, float Glambda, float Gpsi, int Gk
 int main()
 {
     Mat pInput = imread("../image/Grab_Image.bmp", 0);
-    resize(pInput, pInput, Size(512, 512));
+    // resize(pInput, pInput, Size(512, 512));
 
     int w = pInput.cols;
     int ws = pInput.cols;
