@@ -13,7 +13,7 @@ char *snuclLoadFile(const char *filename, size_t *length_ret);
 int main()
 {
     Mat src = imread("../image/Grab_Image.bmp", 0);
-    // resize(src, src, Size(512, 512));
+    resize(src, src, Size(512, 512));
     Mat dst_cl(src.size(), src.type());
     Mat dst_cv(src.size(), src.type());
 
